@@ -28,8 +28,9 @@ public class Vista extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jLabel1 = new javax.swing.JLabel();
         escritorio = new javax.swing.JDesktopPane();
+        lblTitulo = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
-        txtAgregarT = new javax.swing.JMenu();
+        txtMenu = new javax.swing.JMenu();
         mnAgregarT = new javax.swing.JMenuItem();
         mnListaTP = new javax.swing.JMenuItem();
         mnListaTC = new javax.swing.JMenuItem();
@@ -45,18 +46,29 @@ public class Vista extends javax.swing.JFrame {
 
         jLabel1.setText("jLabel1");
 
+        lblTitulo.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblTitulo.setText("GESTION DE TAREAS");
+
+        escritorio.setLayer(lblTitulo, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 590, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, escritorioLayout.createSequentialGroup()
+                .addContainerGap(211, Short.MAX_VALUE)
+                .addComponent(lblTitulo)
+                .addGap(199, 199, 199))
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 293, Short.MAX_VALUE)
+            .addGroup(escritorioLayout.createSequentialGroup()
+                .addGap(121, 121, 121)
+                .addComponent(lblTitulo)
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
-        txtAgregarT.setText("Titulo");
+        txtMenu.setText("Menu");
 
         mnAgregarT.setText("Agregar Tareas");
         mnAgregarT.addActionListener(new java.awt.event.ActionListener() {
@@ -64,7 +76,7 @@ public class Vista extends javax.swing.JFrame {
                 mnAgregarTActionPerformed(evt);
             }
         });
-        txtAgregarT.add(mnAgregarT);
+        txtMenu.add(mnAgregarT);
 
         mnListaTP.setText("Lista de Tareas Pendientes");
         mnListaTP.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +84,7 @@ public class Vista extends javax.swing.JFrame {
                 mnListaTPActionPerformed(evt);
             }
         });
-        txtAgregarT.add(mnListaTP);
+        txtMenu.add(mnListaTP);
 
         mnListaTC.setText("Lista de Tareas Completadas");
         mnListaTC.addActionListener(new java.awt.event.ActionListener() {
@@ -80,12 +92,12 @@ public class Vista extends javax.swing.JFrame {
                 mnListaTCActionPerformed(evt);
             }
         });
-        txtAgregarT.add(mnListaTC);
+        txtMenu.add(mnListaTC);
 
         mnSalir.setText("Salir");
-        txtAgregarT.add(mnSalir);
+        txtMenu.add(mnSalir);
 
-        jMenuBar1.add(txtAgregarT);
+        jMenuBar1.add(txtMenu);
 
         setJMenuBar(jMenuBar1);
 
@@ -135,10 +147,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
+    private javax.swing.JLabel lblTitulo;
     private javax.swing.JMenuItem mnAgregarT;
     private javax.swing.JMenuItem mnListaTC;
     private javax.swing.JMenuItem mnListaTP;
     private javax.swing.JMenuItem mnSalir;
-    private javax.swing.JMenu txtAgregarT;
+    private javax.swing.JMenu txtMenu;
     // End of variables declaration//GEN-END:variables
 }
