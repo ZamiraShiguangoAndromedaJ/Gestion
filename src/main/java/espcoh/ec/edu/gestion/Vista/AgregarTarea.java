@@ -58,6 +58,11 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
         });
 
         jbRegresar.setText("Regresar");
+        jbRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbRegresarActionPerformed(evt);
+            }
+        });
 
         jbAgregar.setText("Borrar");
 
@@ -131,6 +136,10 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
     private void txtTexto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTexto1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTexto1ActionPerformed
+
+    private void jbRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbRegresarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbRegresarActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

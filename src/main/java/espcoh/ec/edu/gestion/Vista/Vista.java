@@ -95,6 +95,11 @@ public class Vista extends javax.swing.JFrame {
         txtMenu.add(mnListaTC);
 
         mnSalir.setText("Salir");
+        mnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnSalirActionPerformed(evt);
+            }
+        });
         txtMenu.add(mnSalir);
 
         jMenuBar1.add(txtMenu);
@@ -132,6 +137,11 @@ public class Vista extends javax.swing.JFrame {
        escritorio.add(verventana);
        verventana.show();
     }//GEN-LAST:event_mnListaTCActionPerformed
+
+    private void mnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnSalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(WIDTH);
+    }//GEN-LAST:event_mnSalirActionPerformed
 
     /**
      * @param args the command line arguments
