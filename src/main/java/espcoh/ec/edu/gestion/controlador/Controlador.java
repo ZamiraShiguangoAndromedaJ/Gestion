@@ -5,6 +5,8 @@
 package espcoh.ec.edu.gestion.controlador;
 
 import espcoh.ec.edu.gestion.Vista.Vista;
+import espcoh.ec.edu.gestion.modelo.GestorTareas;
+import espcoh.ec.edu.gestion.modelo.Tarea;
 
 /**
  *
@@ -12,18 +14,44 @@ import espcoh.ec.edu.gestion.Vista.Vista;
  */
 public class Controlador {
     
-    //Controlador unindo lo vista y el modelo
-    
-    
-   /* private Modelo modelo;
-    private Vista vista;
-    private GestionTarea gestionTarea;
+    public GestorTareas gestor; 
+    public Vista vista;         
 
-    public Controlador(Modelo modelo, Vista vista, GestionTarea gestionTarea) {
-        this.modelo = modelo;
-        this.vista = vista;
-        this.gestionTarea = gestionTarea;
-    }*/
+    // Constructor: Inicializa el Modelo y la Vista
+    public Controlador() {
+        gestor = new GestorTareas();
+        vista = new Vista();
+    }
+
+    // Método principal que inicia la aplicación
+    public void iniciar() {
+        int opcion;
+        do {
+            opcion = vista.mostrarMenu(); 
+            procesarOpcion(opcion);      
+        } while (opcion != 4); 
+    }
+
+
+    public void agregarTarea() {
+        String[] datosTarea = vista.solicitarDatosTarea(); 
+        int nuevoId = gestorTareas.generarNuevoId();             
+        Tarea tarea = new Tarea(nuevoId, datosTarea[0], datosTarea[1]);
+        gestor.agregarTarea(tarea);                      
+    }
+
+    
+    public void listarTareasPendientes() {
+        Tarea[] pendientes = gestor.listarTareasPendientes();
+        vista.mostrarTareas(pendientes, "Pendientes");
+    }
+
+    // Lista tareas completadas
+    public void listarTareasCompletadas() {
+        Tarea[] completadas = gestor.listarTareasCompletadas();
+        vista.mostrarTareas(completadas, "Completadas");
+    }
+    }
     
     
     

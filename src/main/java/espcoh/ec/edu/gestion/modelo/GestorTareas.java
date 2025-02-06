@@ -9,10 +9,18 @@ package espcoh.ec.edu.gestion.modelo;
  * @author sahid
  */
 public class GestorTareas {
-    private Tarea[] tareas = new Tarea[10]; 
-    private int cantidadTareas = 0;
-    private int ultimoId = 0;
+    public Tarea[] tareas = new Tarea[10];
+    public int cantidadTareas = 0;
+    public int ultimoId = 0;
 
+    public void agregarTarea(Tarea tarea) {
+        if (cantidadTareas < tareas.length) {
+            tareas[cantidadTareas] = tarea;
+            cantidadTareas++;
+        } else {
+            System.out.println("Error, ya no hay mas espacio");
+        }
+    }
 
     public Tarea[] listarTareasPendientes() {
         Tarea[] pendientes = new Tarea[cantidadTareas];
@@ -23,8 +31,7 @@ public class GestorTareas {
                 contador++;
             }
         }
-        // Recortar el arreglo al tamaño real
-        return recortarArreglo(pendientes, contador);
+        return pendientes;
     }
 
     public Tarea[] listarTareasCompletadas() {
@@ -36,14 +43,13 @@ public class GestorTareas {
                 contador++;
             }
         }
-        return recortarArreglo(completadas, contador);
+        return completadas;
     }
 
     public void marcarComoCompletada(int id) {
         for (int i = 0; i < cantidadTareas; i++) {
             if (tareas[i].id == id) {
                 tareas[i].completada = true;
-                break; // Salir del bucle cuando se encuentra
             }
         }
     }
@@ -51,14 +57,6 @@ public class GestorTareas {
     public int generarNuevoId() {
         ultimoId++;
         return ultimoId;
-    }
-
-    private Tarea[] recortarArreglo(Tarea[] arreglo, int nuevoTamano) {
-        Tarea[] resultado = new Tarea[nuevoTamano];
-        for (int i = 0; i < nuevoTamano; i++) {
-            resultado[i] = arreglo[i];
-        }
-        return resultado;
     }
 }
 

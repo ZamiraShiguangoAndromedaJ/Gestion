@@ -4,6 +4,7 @@
  */
 package espcoh.ec.edu.gestion.Vista;
 
+
 /**
  *
  * @author anthony
@@ -64,6 +65,11 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
         jbRegresar.setText("Regresar");
 
         jbAgregarT.setText("Agregar Tarea");
+        jbAgregarT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbAgregarTActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,6 +139,10 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
     private void txtTexto1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtTexto1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTexto1ActionPerformed
+
+    private void jbAgregarTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbAgregarTActionPerformed
+      controlador.agregarTareas  
+    }//GEN-LAST:event_jbAgregarTActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
