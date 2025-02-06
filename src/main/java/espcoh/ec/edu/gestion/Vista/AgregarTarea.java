@@ -33,10 +33,9 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
         txtTexto1 = new javax.swing.JTextField();
         txtTexto2 = new javax.swing.JTextField();
         txtTexto3 = new javax.swing.JTextField();
-        jrCompletada = new javax.swing.JRadioButton();
-        jrPendiente = new javax.swing.JRadioButton();
         jbRegresar = new javax.swing.JButton();
-        jbAgregarT = new javax.swing.JButton();
+        jbAgregar = new javax.swing.JButton();
+        jbAgregarT1 = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -57,13 +56,11 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
             }
         });
 
-        jrCompletada.setText("Completada");
-
-        jrPendiente.setText("Pendiente");
-
         jbRegresar.setText("Regresar");
 
-        jbAgregarT.setText("Agregar Tarea");
+        jbAgregar.setText("Borrar");
+
+        jbAgregarT1.setText("Agregar");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -72,7 +69,7 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(195, 195, 195)
                 .addComponent(lblTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
                 .addComponent(jbRegresar)
                 .addGap(20, 20, 20))
             .addGroup(layout.createSequentialGroup()
@@ -89,15 +86,11 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
                             .addComponent(txtTexto2)
                             .addComponent(txtTexto3, javax.swing.GroupLayout.DEFAULT_SIZE, 231, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(jrCompletada)
-                        .addGap(80, 80, 80)
-                        .addComponent(jrPendiente)))
-                .addContainerGap(48, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jbAgregarT)
-                .addGap(191, 191, 191))
+                        .addGap(127, 127, 127)
+                        .addComponent(jbAgregar)
+                        .addGap(55, 55, 55)
+                        .addComponent(jbAgregarT1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -118,13 +111,11 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblDescripcion)
                     .addComponent(txtTexto3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(38, 38, 38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 67, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jrCompletada)
-                    .addComponent(jrPendiente))
-                .addGap(18, 18, 18)
-                .addComponent(jbAgregarT)
-                .addContainerGap(33, Short.MAX_VALUE))
+                    .addComponent(jbAgregarT1)
+                    .addComponent(jbAgregar))
+                .addGap(43, 43, 43))
         );
 
         pack();
@@ -136,10 +127,9 @@ public class AgregarTarea extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jbAgregarT;
+    private javax.swing.JButton jbAgregar;
+    private javax.swing.JButton jbAgregarT1;
     private javax.swing.JButton jbRegresar;
-    private javax.swing.JRadioButton jrCompletada;
-    private javax.swing.JRadioButton jrPendiente;
     private javax.swing.JLabel lblDescripcion;
     private javax.swing.JLabel lblId;
     private javax.swing.JLabel lblTexto;
