@@ -4,6 +4,8 @@
  */
 package espcoh.ec.edu.gestion.controlador;
 
+import espcoh.ec.edu.gestion.Vista.Vista;
+
 /**
  *
  * @author user
@@ -13,7 +15,7 @@ public class Controlador {
     //Controlador unindo lo vista y el modelo
     
     
-    /*private Modelo modelo;
+   /* private Modelo modelo;
     private Vista vista;
     private GestionTarea gestionTarea;
 
@@ -21,8 +23,8 @@ public class Controlador {
         this.modelo = modelo;
         this.vista = vista;
         this.gestionTarea = gestionTarea;
-    }
-    */
+    }*/
+    
     
     
 

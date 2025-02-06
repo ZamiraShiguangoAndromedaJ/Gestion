@@ -4,6 +4,8 @@
 
 package espcoh.ec.edu.gestion;
 
+import espcoh.ec.edu.gestion.Vista.Vista;
+
 /**
  *
  * @author user
@@ -11,6 +13,14 @@ package espcoh.ec.edu.gestion;
 public class Gestion {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        Vista Vista = new Vista();
+        Vista.setVisible(true);
+        
+        
+        
+        
+        
+        
     }
 }
